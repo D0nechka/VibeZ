@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+## Запуск проекта
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+npm install - устанавливаем зависимости
+npm run start:dev или npm run start:dev:vite - запуск сервера + frontend проекта в dev режиме
+```
 
-## Available Scripts
+----
 
-In the project directory, you can run:
+## Скрипты
 
-### `npm start`
+- `npm run start:server` - Запуск сервера
+- `npm run dev` - Запуск frontend проекта
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- `npm run build` - запуск сборки проекта
+- `npm run lint` -  запуск линтера 
+- `npm run preview` - запуск превью проекта
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+----
 
-### `npm test`
+## Структура проекта
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> `src/*` - Корневая папка проекта в которой хранятся исходные файлы 
 
-### `npm run build`
+> `src/app/*` - Папка app хранит в себе папки с: 
+* `src/app/hooks/*` - хуки
+* `src/app/router/*` - роутер
+* `src/app/store/*` - стор
+* `src/app/styles/*` - стили
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> `src/features/*` - Папка app хранит в себе папки с действиями, которые пользователь может совершать в приложении для взаимодействия с бизнес-сущностями.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> `src/pages/*` - Папка pages хранит в себе папки со страницами проекта
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> `src/services/*` - Папка services хранит в себе файлы для работы с сервером
 
-### `npm run eject`
+> `src/shared/*` - Папка для хранения общих/переиспользуемых сущностей
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> `src/shared/*` - Папка для хранения общих/переиспользуемых сущностей
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+> `src/widgets/*` - Папка для хранения самодостаточных блоков пользовательского интерфейса
