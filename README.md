@@ -1,8 +1,8 @@
 ## Запуск проекта
 
 ```
-npm install - устанавливаем зависимости
-npm run start:dev или npm run start:dev:vite - запуск сервера + frontend проекта в dev режиме
+    "npm run start": Запуск проекта,
+    "npm run build": Билд проекта,
 ```
 
 ----
