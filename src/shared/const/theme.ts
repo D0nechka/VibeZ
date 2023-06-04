@@ -3,4 +3,4 @@ export enum Theme {
     LIGHT= 'app_light'
 }
 
-export const LOCAL_STORAGE_THEME_KEY = 'theme';
+export const LOCAL_STORAGE_THEME_KEY = 'app_theme';
