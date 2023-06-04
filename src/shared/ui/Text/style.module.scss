@@ -1,0 +1,44 @@
+.s {
+    font-size: 14px;
+}
+
+.m {
+    font-size: 18px;
+}
+
+.l {
+    font-size: 22px;
+}
+
+.xl {
+    font-size: 26px;
+}
+
+.primary {
+    color: var(--black);
+}
+
+.bold {
+    color: var(--black);
+    font-weight: bold;
+}
+
+.gray {
+    color: var(--gray);
+
+}
+
+.grayback {
+    color: var(--white);
+    background: var(--gray);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.green {
+    color: var(--green);
+}
