@@ -13,7 +13,7 @@ export enum TextType {
     PRIMARY = 'primary',
     BOLD = 'bold',
     GRAY = 'gray',
-    GRAYBACK = 'grayback',
+    WHITE = 'white',
     BLUE = 'blue',
     GREEN = 'green'
 }
