@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import { classNames } from 'src/shared/lib/classNames/classNames';
 import { Text, TextSize, TextType } from '../Text/Text';
-import cls from './style.module.scss';
 import { ClosedEyeIcon, EyeIcon } from '../icons';
+import cls from './style.module.scss';
 
 export enum InputSize {
     S = 's',
@@ -10,7 +10,9 @@ export enum InputSize {
     L = 'l'
 }
 
-interface InputProps {
+type HTMLInputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'size'>
+
+interface InputProps extends HTMLInputProps {
     isPassword?: boolean
     size?: InputSize;
     labelSize?: TextSize;
@@ -18,7 +20,6 @@ interface InputProps {
     labelText?: string;
     onChange?: (value: string) => void;
     className?: string;
-    placeholder?: string;
     Icon?: FC;
 }
 
@@ -31,16 +32,25 @@ export const Input = (props:InputProps) => {
         isPassword = false,
         labelSize,
         labelType,
-        placeholder,
         Icon,
+        ...otherProps
     } = props;
+
+    const [ type, setType ] = useState('password');
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value, } = e.target;
         onChange?.(value);
     };
 
-    const [ type, setType ] = useState('');
+    const handleChangeType = () => {
+        if (type === 'password') {
+            setType('text');
+        } else {
+            setType('password');
+        }
+    };
+
     const isHide = type === 'password';
 
     return (
@@ -53,7 +63,6 @@ export const Input = (props:InputProps) => {
             </Text>
             <div className={cls.inputContainer}>
                 <input
-                    placeholder={placeholder}
                     onChange={onChangeHandler}
                     type={type}
                     className={classNames(
@@ -61,17 +70,11 @@ export const Input = (props:InputProps) => {
                         { [cls.padding]: Boolean(isPassword || Icon), },
                         [ cls[size], className ]
                     )}
+                    {...otherProps}
                 />
                 <div className={cls.iconContainer}>
                     <button
-                        onClick={() => {
-                            if(type === 'password') {
-                                setType('');
-                            }else
-                            {
-                                setType('password');
-                            }
-                        }}
+                        onClick={handleChangeType}
                     >
                         {isPassword ? !isHide ? <EyeIcon/> : <ClosedEyeIcon/> : Icon && <Icon />}
 
