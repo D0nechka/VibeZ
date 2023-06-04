@@ -1,0 +1,27 @@
+.container {
+    width: 1rem;
+    height: 1rem;
+    box-shadow: 3px 3px 0 0 var(--white);
+    transform: rotate(100deg);
+    border-radius: 100%;
+
+    transition: all 300ms ease-in;
+    position: relative;
+}
+
+.light {
+    width: 10px;
+    height: 10px;
+    box-shadow: none;
+    border: 1px solid var(--white);
+}
+
+.winds {
+    transition: all 150ms ease-in;
+    position: absolute;
+    opacity: 0;
+}
+
+.onSun {
+    opacity: 1;
+}
