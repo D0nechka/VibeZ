@@ -1,0 +1,40 @@
+.input {
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+}
+
+.input:disabled {
+    border: 1px solid var(--opacity-blue);
+}
+
+.s {
+    width: 220px;
+    height: 50px;
+}
+
+.m { 
+    width: 250px;
+    height: 50px;
+}
+
+.l {
+    width: 290px;
+    height: 70px;
+}
+
+.inputContainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.iconContainer {
+    position: absolute;
+    padding-right: 10px;
+    margin-top: 3px
+}
+
+.padding {
+    padding-right: 40px;
+}

@@ -1,0 +1,71 @@
+.toggle {
+    width: fit-content;
+    position: relative;
+    background: var(--gray);
+    border-radius: 70px;
+    display: flex;
+}
+
+.toggle:disabled {
+    background: var(--opacity-white);
+
+    > .circle {
+        background: var(--gray)
+    }
+}
+
+.active {
+    background: var(--green);
+}
+
+.primary {
+    background: var(--white);
+}
+
+.hover {
+    background: var(--gray-black);
+}
+
+.circle {
+    border-radius: 100%;
+    justify-self: start;
+    transition: transform 100ms ease-in;
+    position: absolute;
+    left: 3%;
+}
+
+.circleActive {
+    background: var(--white);
+    left: auto;
+    -webkit-transform: translate(80%, 0%);
+}
+
+.s {
+    width: 50px;
+    height: 22px;
+
+    > .circle {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.m {
+    width: 75px;
+    height: 30px;
+
+    > .circle {
+        width: 27px;
+        height: 27px;
+    }
+}
+
+.l {
+    width: 90px;
+    height: 40px;
+
+    > .circle {
+        width: 32px;
+        height: 32px;
+    }
+}
