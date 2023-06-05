@@ -5,3 +5,5 @@ export * from './Tooltip/Tooltip';
 export * from './Toggle/Toggle';
 export * from './Checkbox/Checkbox';
 export * from './Radio/Radio';
+export * from './Input/Input';
+export * from './Spinner/Spinner';
