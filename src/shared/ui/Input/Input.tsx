@@ -10,9 +10,7 @@ export enum InputSize {
     L = 'l'
 }
 
-type HTMLInputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'size'>
-
-interface InputProps extends HTMLInputProps {
+interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'size'> {
     isPassword?: boolean
     size?: InputSize;
     labelSize?: TextSize;
@@ -23,7 +21,7 @@ interface InputProps extends HTMLInputProps {
     Icon?: FC;
 }
 
-export const Input = (props:InputProps) => {
+export const Input: FC<InputProps> = (props) => {
     const {
         size = InputSize.M,
         labelText,
@@ -77,7 +75,6 @@ export const Input = (props:InputProps) => {
                         onClick={handleChangeType}
                     >
                         {isPassword ? !isHide ? <EyeIcon/> : <ClosedEyeIcon/> : Icon && <Icon />}
-
                     </button>
                 </div>
             </div>

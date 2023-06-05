@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 import { classNames } from 'src/shared/lib/classNames/classNames';
 import cls from './style.module.scss';
 
@@ -25,7 +25,7 @@ interface TextProps {
     children: ReactNode
 }
 
-export const Text = (props:TextProps) => {
+export const Text: FC<TextProps> = (props) => {
     const {
         size = TextSize.M,
         type = TextType.PRIMARY,
