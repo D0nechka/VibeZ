@@ -32,7 +32,7 @@ export const Checkbox: FC<CheckboxProps> = (props) => {
             onClick={onChange}
             className={classNames(cls.checkbox, { [cls.active]: isChecked, }, [ className, cls[size] ])}
         >
-            {isChecked && <VectotIcon/>}
+            {isChecked && <VectotIcon />}
         </button>
     );
 };

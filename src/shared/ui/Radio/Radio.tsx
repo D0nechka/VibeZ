@@ -32,7 +32,7 @@ export const Radio: FC<RadioProps> = (props) => {
             onClick={onChange}
             className={classNames(cls.radio, { [cls.active]: isChecked, }, [ className, cls[size] ])}
         >
-            {isChecked && <VectotIcon/>}
+            {isChecked && <VectotIcon />}
         </button>
     );
 };
