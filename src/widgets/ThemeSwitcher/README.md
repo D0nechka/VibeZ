@@ -1,4 +1,4 @@
-#### Widget - ThemeSwitcher
+#### widget - ThemeSwitcher
 
 ```
     Компонент заключает в себе возможность изменять тему приложения

@@ -21,7 +21,7 @@ export const RegForm = () => {
             <Text className={cls.title}>Регистрация в приложении</Text>
             <Input
                 placeholder='Введите вашу почту'
-                labelText='Email'
+                labelText='Почта'
                 classNameContainer={cls.inputContainerEmail}
                 className={cls.input}
                 value={email}
@@ -29,7 +29,7 @@ export const RegForm = () => {
             />
             <Input
                 placeholder='Введите ваш пароль'
-                labelText='Password'
+                labelText='Пароль'
                 classNameContainer={cls.inputContainerPassword}
                 className={cls.input}
                 isPassword
@@ -38,7 +38,7 @@ export const RegForm = () => {
             />
             <Input
                 placeholder='Подтвердите ваш пароль'
-                labelText='Repeat password'
+                labelText='Подтверждение пароля'
                 classNameContainer={cls.inputContainerPassword}
                 className={cls.input}
                 isPassword

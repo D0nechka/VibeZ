@@ -20,7 +20,7 @@ export const AuthForm: FC = () => {
             <Text className={cls.title}>Вход в приложение</Text>
             <Input
                 placeholder='Введите вашу почту'
-                labelText='Email'
+                labelText='Почта'
                 classNameContainer={cls.inputContainerEmail}
                 className={cls.input}
                 value={email}
@@ -28,7 +28,7 @@ export const AuthForm: FC = () => {
             />
             <Input
                 placeholder='Введите ваш пароль'
-                labelText='Password'
+                labelText='Пароль'
                 classNameContainer={cls.inputContainerPassword}
                 className={cls.input}
                 isPassword
