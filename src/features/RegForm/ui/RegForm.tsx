@@ -18,7 +18,7 @@ export const RegForm = () => {
     return (
         <div className={cls.form}>
             <Logo className={cls.logo} />
-            <Text className={cls.title}>Вход в приложение</Text>
+            <Text className={cls.title}>Регистрация в приложении</Text>
             <Input
                 placeholder='Введите вашу почту'
                 labelText='Email'
