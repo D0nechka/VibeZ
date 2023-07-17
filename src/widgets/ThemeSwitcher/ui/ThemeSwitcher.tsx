@@ -1,11 +1,12 @@
-import cls from './style.module.scss';
 import { Button, ButtonVariant } from 'src/shared/ui/Button/Button';
 import { useTheme } from 'src/app/hooks/useTheme';
 import { classNames } from 'src/shared/lib/classNames/classNames';
 import { Theme } from 'src/shared/const/theme';
 import { SunIcon } from 'src/shared/ui';
+import { FC } from 'react';
+import cls from './style.module.scss';
 
-export const ThemeSwitcher = () => {
+export const ThemeSwitcher: FC = () => {
     const { toggleTheme, theme, } = useTheme();
 
     const isLight = theme === Theme.LIGHT;

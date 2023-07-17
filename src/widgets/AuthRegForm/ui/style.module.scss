@@ -1,0 +1,16 @@
+.contentChanger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--opacity-blue);
+    border-radius: 20px;
+    margin-top: 14px;
+    width: 618px;
+    height: 101px;
+}
+
+.btnChange {
+    color: var(--white);
+    width: fit-content;
+}

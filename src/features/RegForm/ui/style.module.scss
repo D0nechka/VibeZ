@@ -1,0 +1,51 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 618px;
+    height: 548px;
+    background: var(--opacity-blue);
+    border-radius: 20px;
+}
+
+.logo {
+    width: 110px;
+    height: 51px;
+    margin-top: 10px;
+}
+
+.title {
+    margin-top: 15px;
+}
+
+.inputContainerEmail {
+    margin-top: 40px;
+}
+
+.inputContainerPassword {
+    margin-top: 23px;
+}
+
+.btnReg {
+    margin-top: 40px;
+    align-self: flex-end;
+    margin-right: 66px;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 272px;
+    height: 60px;
+}
+
+.input {
+    width: 486px;
+    padding-left: 10px;
+}
+
+.btnContent {
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-left: 20px;
+    }
+}

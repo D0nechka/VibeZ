@@ -1,0 +1,16 @@
+.logo {
+    width: 137px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    border-radius: 5px;
+}
+
+.logoText {
+    color: var(--white);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+    font-weight: 600;
+}

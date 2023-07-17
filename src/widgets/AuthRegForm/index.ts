@@ -1,0 +1,1 @@
+export { AuthRegForm } from './ui/AuthRegForm';

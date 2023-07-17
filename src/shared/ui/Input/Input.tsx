@@ -18,6 +18,7 @@ interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, '
     labelText?: string;
     onChange?: (value: string) => void;
     className?: string;
+    classNameContainer?: string;
     Icon?: FC;
 }
 
@@ -31,6 +32,7 @@ export const Input: FC<InputProps> = (props) => {
         labelSize,
         labelType,
         Icon,
+        classNameContainer,
         ...otherProps
     } = props;
 
@@ -52,7 +54,7 @@ export const Input: FC<InputProps> = (props) => {
     const isHide = type === 'password';
 
     return (
-        <div className = {classNames(cls.container)}>
+        <div className = {classNames(cls.container, {}, [ classNameContainer ])}>
             <Text
                 size={labelSize}
                 type={labelType}
@@ -62,7 +64,7 @@ export const Input: FC<InputProps> = (props) => {
             <div className={cls.inputContainer}>
                 <input
                     onChange={onChangeHandler}
-                    type={type}
+                    type={isPassword ? type : otherProps.type}
                     className={classNames(
                         cls.input,
                         { [cls.padding]: Boolean(isPassword || Icon), },
@@ -74,7 +76,7 @@ export const Input: FC<InputProps> = (props) => {
                     <button
                         onClick={handleChangeType}
                     >
-                        {isPassword ? !isHide ? <EyeIcon/> : <ClosedEyeIcon/> : Icon && <Icon />}
+                        {isPassword ? !isHide ? <ClosedEyeIcon /> : <EyeIcon /> : Icon && <Icon />}
                     </button>
                 </div>
             </div>
