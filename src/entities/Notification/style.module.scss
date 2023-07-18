@@ -1,0 +1,30 @@
+.notification {
+    width: fit-content;
+    max-width: 350px;
+    height: fit-content;
+    background: var(--blue);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    transform: translateX(calc(100% + 10px));
+    transition: transform 0.3s ease-out;
+}
+
+.notificationOpen {
+    transform: translateX(0);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: fit-content;
+    height: fit-content;
+    
+    svg {
+        > * {
+            fill: var(--white);
+        }
+    }
+}

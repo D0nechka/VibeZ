@@ -1,0 +1,9 @@
+.notificationsList {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-index-notifications);
+    height: fit-content;
+    padding: 10px;
+    overflow: hidden;
+}
