@@ -6,6 +6,18 @@
     height: 450px;
     background: var(--opacity-blue);
     border-radius: 20px;
+
+    @media (max-width: 650px) {
+        width: 400px;
+    }
+
+    @media (max-width: 450px) {
+        width: 300px;
+    }
+
+    @media (max-width: 320px) {
+        width: 200px;
+    }
 }
 
 .logo {
@@ -20,21 +32,72 @@
 
 .inputContainerEmail {
     margin-top: 40px;
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            font-size: 10px;
+        }
+    }
 }
 
 .inputContainerPassword {
     margin-top: 23px;
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            font-size: 10px;
+        }
+    }
 }
 
 .btnAuth {
     margin-top: 40px;
     align-self: flex-end;
     margin-right: 66px;
+
+    @media (max-width: 450px) {
+        width: 200px;
+        align-self: center;
+        margin-right: 0px;
+         
+        span {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        width: 150px;
+        height: 40px;
+
+        span {
+            font-size: 8px;
+        }
+    }
 }
 
 .input {
     width: 486px;
     padding-left: 10px;
+
+    @media (max-width: 650px) {
+        width: 300px;
+    }
+
+    @media (max-width: 450px) {
+        width: 200px;
+    }
+
+    @media (max-width: 320px) {
+        width: 150px;
+    }
 }
 
 .btnContent {
