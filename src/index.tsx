@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Provider store={store}>
             <NotificationProvider>
                 <ThemeProvider>
-                    <App/>
+                    <App />
                 </ThemeProvider>
             </NotificationProvider>
         </Provider>

@@ -1,4 +1,4 @@
 export type InitialState = {
     id: number | null;
-    role: string | null;
+    email: string | null;
 }

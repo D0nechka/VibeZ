@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { $axios } from 'src/app/api/axios';
-import { Notification } from './types';
+import { Notification } from '../types';
 
 export const getNotification = createAsyncThunk(
     'notification/get',

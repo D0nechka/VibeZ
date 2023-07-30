@@ -4,16 +4,16 @@ import { RootState } from '../..';
 
 const initialState: InitialState = {
     id: null,
-    role: null,
+    email: null,
 };
 
 export const userSlice = createSlice({
-    name: 'notification',
+    name: 'user',
     initialState,
     reducers: {
         authUser: (state, action: PayloadAction<InitialState>) => {
             state.id = action.payload.id;
-            state.role = action.payload.role;
+            state.email = action.payload.email;
         },
     },
 });
@@ -23,4 +23,4 @@ export const userReducer = userSlice.reducer;
 export const { authUser, } = userSlice.actions;
 
 export const getUserId = (state: RootState) => state.user.id;
-export const getUserRole = (state: RootState) => state.user.role;
+export const getUserEmail = (state: RootState) => state.user.email;

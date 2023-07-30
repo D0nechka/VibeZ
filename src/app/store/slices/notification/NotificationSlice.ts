@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { InitialState, Notification } from './types';
-import { getNotification } from './getNotifications';
+import { getNotification } from './services/getNotifications';
 import { RootState } from '../..';
 
 const initialState: InitialState = {

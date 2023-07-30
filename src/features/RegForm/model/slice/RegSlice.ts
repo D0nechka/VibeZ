@@ -5,6 +5,7 @@ const initialState: InitialState = {
     email: '',
     password: '',
     repeatPassword: '',
+    error: '',
 };
 
 export const regSlice = createSlice({
@@ -20,6 +21,9 @@ export const regSlice = createSlice({
         changeRegEmail: (state, action: PayloadAction<string>) => {
             state.email = action.payload;
         },
+        changeRegError: (state, action: PayloadAction<string>) => {
+            state.error = action.payload;
+        },
     },
 });
 
@@ -29,4 +33,5 @@ export const {
     changeRegPassword,
     changeRegRepeatPassword,
     changeRegEmail,
+    changeRegError,
 } = regSlice.actions;
