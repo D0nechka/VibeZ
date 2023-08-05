@@ -54,7 +54,7 @@ export const Input: FC<InputProps> = (props) => {
     const isHide = type === 'password';
 
     return (
-        <div className = {classNames(cls.container, {}, [ classNameContainer ])}>
+        <div className = {classNames(cls.container, {}, [ classNameContainer ])} data-testid="input">
             <Text
                 size={labelSize}
                 type={labelType}

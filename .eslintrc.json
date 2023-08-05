@@ -34,6 +34,7 @@
 		"comma-dangle": ["error", {
 			"objects": "always"
 		}],
+        "no-undef": "off",
         "quotes": [
 			"error",
 			"single"

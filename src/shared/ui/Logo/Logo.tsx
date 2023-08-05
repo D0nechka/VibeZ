@@ -12,7 +12,7 @@ export const Logo: FC<LogoProps> = ({
     className,
 }) => {
     return (
-        <div className={classNames(cls.logo, {}, [ className ])}>
+        <div className={classNames(cls.logo, {}, [ className ])} data-testid="logo">
             <span
                 className={cls.logoText}
             >{text?.length ? text : '</> | VIBEZ'}</span>

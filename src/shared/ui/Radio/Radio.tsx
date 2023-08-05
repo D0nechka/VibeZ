@@ -31,6 +31,7 @@ export const Radio: FC<RadioProps> = (props) => {
             disabled={disabled}
             onClick={onChange}
             className={classNames(cls.radio, { [cls.active]: isChecked, }, [ className, cls[size] ])}
+            data-testid="radio"
         >
             {isChecked && <VectotIcon />}
         </button>

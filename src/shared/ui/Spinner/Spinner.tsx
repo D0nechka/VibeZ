@@ -17,6 +17,7 @@ export const Spinner: FC<SpinnerProps> = (props) => {
                 height: `${size}px`,
                 width: `${size}px`,
             }}
+            data-testid="spinner"
         ></div>
     );
 };

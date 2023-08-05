@@ -29,7 +29,7 @@ export const Tooltip: FC<TooltipProps> = (props) => {
         classNameText = '',
     } = props;
 
-    const [ isHover, setIsHover ] = useState(true);
+    const [ isHover, setIsHover ] = useState(false);
     const [ height, setHeight ] = useState(0);
     const [ width, setWidth ] = useState(0);
     const ref = useRef<HTMLDivElement>(null);
@@ -50,6 +50,7 @@ export const Tooltip: FC<TooltipProps> = (props) => {
                 className={classNames(cls.wrapper, { [cls.wrapperRight]: variant === TooltipVariant.RIGHT, })}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                data-testid="tooltip"
             >
                 {
                     isHover && (
@@ -61,6 +62,7 @@ export const Tooltip: FC<TooltipProps> = (props) => {
                                     ? { top: `-${height + 10}px`, }
                                     : { right: `-${width + 10}px`, }
                             }
+                            data-testid="tooltip-text"
                         >
                             <Text
                                 type={typeText}

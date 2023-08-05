@@ -34,7 +34,7 @@ export const Text: FC<TextProps> = (props) => {
     } = props;
 
     return (
-        <span className={classNames(cls.text, {}, [ className, cls[type], cls[size] ])}>
+        <span className={classNames(cls.text, {}, [ className, cls[type], cls[size] ])} data-testid="text">
             {children}
         </span>
     );
